@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jurplel/install-qt-action.git"
+    "url": "git+https://github.com/crueter/install-qt-action.git"
   },
   "author": "jurplel",
   "license": "MIT",
