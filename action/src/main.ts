@@ -104,7 +104,7 @@ const isAutodesktopSupported = async (): Promise<boolean> => {
 };
 
 class Inputs {
-  readonly host: "windows" | "mac" | "linux";
+  readonly host: "windows" | "mac" | "linux" | "windows_arm64" | "linux_arm64";
   readonly target: "desktop" | "android" | "ios";
   readonly version: string;
   readonly arch: string;
@@ -156,7 +156,7 @@ class Inputs {
       }
     } else {
       // Make sure host is one of the allowed values
-      if (host === "windows" || host === "mac" || host === "linux") {
+      if (host === "windows" || host === "mac" || host === "linux" || host === "windows_arem64" || host === "linux_arm64") {
         this.host = host;
       } else {
         throw TypeError(`host: "${host}" is not one of "windows" | "mac" | "linux"`);

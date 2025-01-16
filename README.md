@@ -32,7 +32,7 @@ This is the host platform of the Qt version you will be installing. It's unlikel
 
 For example, if you are building on Linux and targeting desktop, you would set host to `linux`. If you are building on Linux and targeting android, you would set host to `linux` also. The host platform is the platform that your application will build on, not its target platform.
 
-Possible values: `windows`, `mac`, or `linux`
+Possible values: `windows`, `windows_arm64`, `mac`, `linux`, or `linux_arm64`
 
 Defaults to the current platform it is being run on.
 
@@ -120,7 +120,7 @@ Specify the tool name and tool variant name separated by commas, and separate mu
 If you wish to install all tools available for a given tool name, you can leave off the tool variant name.
 I would advise reading the [aqtinstall docs](https://aqtinstall.readthedocs.io/en/latest/getting_started.html#installing-tools) for more info on installing tools.
 
-For example, this value will install the most recent versions of QtIFW and QtCreator: 
+For example, this value will install the most recent versions of QtIFW and QtCreator:
 ```
     tools: 'tools_ifw tools_qtcreator,qt.tools.qtcreator'
 ```
@@ -130,7 +130,7 @@ You can find a full list of tools easily by using [this awesome website](https:/
 ### `add-tools-to-path`
 
 When set to `true`, and the `tools` parameter is non-empty,
-the following paths will be prepended to the `PATH` variable: 
+the following paths will be prepended to the `PATH` variable:
 * `Tools/**/bin`
 * `*.app/Contents/MacOS`
 * `*.app/**/bin`
@@ -224,7 +224,7 @@ Default: `true`
 
 ### `no-qt-binaries`
 
-Set this to true if you want to skip installing Qt. 
+Set this to true if you want to skip installing Qt.
 This option is useful if you want to install tools, source, documentation, or examples.
 
 Default: `false`
