@@ -156,7 +156,12 @@ class Inputs {
       }
     } else {
       // Make sure host is one of the allowed values
-      if (host === "windows" || host === "mac" || host === "linux" || host === "windows_arem64" || host === "linux_arm64") {
+      if (host === "windows" ||
+          host === "mac" ||
+          host === "linux" ||
+          host === "windows_arm64" ||
+          host === "linux_arm64"
+         ) {
         this.host = host;
       } else {
         throw TypeError(`host: "${host}" is not one of "windows" | "mac" | "linux"`);
