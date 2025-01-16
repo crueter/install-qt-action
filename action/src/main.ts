@@ -156,12 +156,13 @@ class Inputs {
       }
     } else {
       // Make sure host is one of the allowed values
-      if (host === "windows" ||
-          host === "mac" ||
-          host === "linux" ||
-          host === "windows_arm64" ||
-          host === "linux_arm64"
-         ) {
+      if (
+        host === "windows" ||
+        host === "mac" ||
+        host === "linux" ||
+        host === "windows_arm64" ||
+        host === "linux_arm64"
+      ) {
         this.host = host;
       } else {
         throw TypeError(`host: "${host}" is not one of "windows" | "mac" | "linux"`);
@@ -219,7 +220,7 @@ class Inputs {
     this.tools = Inputs.getStringArrayInput("tools").map(
       // The tools inputs have the tool name, variant, and arch delimited by a comma
       // aqt expects spaces instead
-      (tool: string): string => tool.replace(/,/g, " ")
+      (tool: string): string => tool.replace(/,/g, " "),
     );
 
     this.addToolsToPath = Inputs.getBoolInput("add-tools-to-path");
@@ -409,7 +410,7 @@ const run = async (): Promise<void> => {
     const installSrcDocExamples = async (
       flavor: "src" | "doc" | "example",
       archives: readonly string[],
-      modules: readonly string[]
+      modules: readonly string[],
     ): Promise<void> => {
       const qtArgs = [
         inputs.host,
