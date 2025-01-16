@@ -1,6 +1,6 @@
-name: Install Qt
+name: Install Qt (ARM64 Fork)
 description: Install Qt on your Github Actions workflows with just one simple action
-author: jurplel
+author: crueter
 branding:
   icon: package
   color: green
@@ -83,7 +83,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-  - name: Setup Python 
+  - name: Setup Python
     if: ${{ inputs.setup-python  == 'true' }}
     uses: actions/setup-python@v5
     with:
