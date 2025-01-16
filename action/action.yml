@@ -1,4 +1,4 @@
-name: Install Qt (internal)
+name: Install Qt (ARM64 Fork) (internal)
 description: Install Qt on your Github Actions workflows with just one simple action
 author: jurplel
 branding:
